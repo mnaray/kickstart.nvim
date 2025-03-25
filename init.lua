@@ -445,6 +445,9 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
+
+      -- Shortcut for git
+      vim.keymap.set('n', '<leader>gh', builtin.git_bcommits, { desc = '[G]it file [H]istory for buffer' })
     end,
   },
 
